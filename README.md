@@ -10,7 +10,7 @@ It uses Django and Jinja-like templating.
 
 [Zola Docs](https://www.getzola.org/documentation/getting-started/overview/)
 
-for reference, your project directory structure shluld look something like this:
+For reference, your project directory structure should look something like this:
 
 ```bash
 ├── config.toml
