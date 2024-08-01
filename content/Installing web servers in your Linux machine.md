@@ -51,7 +51,7 @@ If you want to enable them, run :
 a2ensite your_config.conf
 ```
 
-This `a2ensite` command will create a symlink of your config fil ejjjjj into the `/etc/apache2/sites-enabled` directory of your Apache config.
+This `a2ensite` command will create a symlink of your config into the `/etc/apache2/sites-enabled` directory of your Apache config.
 You must enable only the config you want to use. You can disable unwanted config files by running:
 
 ```bash
@@ -72,6 +72,9 @@ You can do this by running:
 ```bash
 sudo systemctl restart apache2
 ```
+
+For additional security purposes, go to `/etc/apache2/conf-enabled` directory and edit the `security.conf` file.
+
 
 # Nginx
 Like Apache, you can also install Nginx by running one command:
@@ -101,8 +104,11 @@ Example nginx config file:
 ```nginx
 server {
     listen 80;
+	servername example.com
     index index.php index.html;
     root /var/www/public;
+
+	trace_enable no;
 
     # serve static files directly
 	location ~* \.(jpg|jpeg|gif|css|png|js|ico|html)$ {
@@ -148,3 +154,6 @@ server {
 	}
 }
 ```
+
+The above sample configuration can be sued as a reference and can be modified according to your needs.
+The `trace_enable` option set to `no` tells the server not to disclose the type and version of the web server used when encountering unexpected pages such as `Not FOund (404)` page.
