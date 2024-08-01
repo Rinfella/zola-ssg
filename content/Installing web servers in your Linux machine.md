@@ -75,7 +75,18 @@ sudo systemctl restart apache2
 
 For additional security purposes, go to `/etc/apache2/conf-enabled` directory and edit the `security.conf` file.
 
+Change the value of `ServerTokens` to `Prod`. It may have the value `OS` by default.
+Changing it to `Prod` will not disclose the OS type, Apache version, etc when encountering unexpected pages such as  `Not Found (404)` error pages.
 
+You must also set the value of `ServerSignature` to `Off`.
+
+Save your changes, and then restart your `apache2` service by running:
+
+```bash
+sudo systemctl restart apache2
+```
+
+Additional security modules can also be added if you are really concerned about web server safety.
 # Nginx
 Like Apache, you can also install Nginx by running one command:
 
