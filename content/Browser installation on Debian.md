@@ -45,4 +45,8 @@ You can also go to Chrome download page and download the `.deb` file and install
 sudo dpkg -i <path_to_your_downloaded_chrome_deb_file>
 ```
 
-Ad
+# Brave
+
+You need to install `curl` if you dn
+
+Adding Chrome or any other type of packages like this into your apt repository is convenient because every time you update your system applications using `sudo apt upgrade`, it includes all these third party applications that you registered. So you don't have to manually download a `.deb` file and reinstall every time there is a new version.
