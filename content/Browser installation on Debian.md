@@ -4,7 +4,7 @@ date = 2024-08-01
 
 [taxonomies]
 categories = ["Ubuntu"", "Linux"]
-tags = ["Browser", "Chrome"]
+tags = ["Browser", "Chrome", "Brave"]
 +++
 
 This guide is for installing Chrome and Brave browsers on Debian and Debian based Linux distros.
