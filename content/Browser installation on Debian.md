@@ -47,6 +47,31 @@ sudo dpkg -i <path_to_your_downloaded_chrome_deb_file>
 
 # Brave
 
-You need to install `curl` if you dn
+You need to install `curl` if you don't already have it:
+
+```bash
+sudo apt isntall curl -y
+```
+
+Download the Brave signing key using curl:
+
+```bash
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+```
+
+Copy the signing key into your keyring:
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+```
+
+Update your apt repositories and then install the Brave application:
+
+```bash
+sudo apt update && sudo apt install brave-browser -y
+```
+
+You can install most of the browsers from Flatpak or Snap stores depending upon your choices.
+# Conclusion
 
 Adding Chrome or any other type of packages like this into your apt repository is convenient because every time you update your system applications using `sudo apt upgrade`, it includes all these third party applications that you registered. So you don't have to manually download a `.deb` file and reinstall every time there is a new version.
