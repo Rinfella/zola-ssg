@@ -71,4 +71,12 @@ background_opacity 0.9
 
 ```
 
-This is just a sample configuration for starter. You can deep dive into the documentations for more detailed guide on how to configure your  
+This is just a sample configuration for starter. You can deep dive into the [documentations](https://sw.kovidgoyal.net/kitty/conf/) for more detailed guide on how to configure your `kitty` terminal.
+
+Kitty is one of the most popular terminal emulator among Linux users and has one of the best features like image rendering support, many kitten modules, etc.
+
+# Conclusion
+
+This is just the tip of the iceberg into customizing your Linux user-interface.
+Since the terminal is one of the most important applications in your Linux system, it is important that you have a good experience with it.
+You can also check out another alternatives like Alacritty, etc.
