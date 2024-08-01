@@ -178,3 +178,21 @@ Open LiteSpeed (OLS) is one of the fastest and most modern web servers right now
 It supports CentOS, Debian and Ubuntu distros. 
 
 To add OLS into your machine repository, you need to run a script:
+
+```bash
+sudo wget -O - https://repo.litespeed.sh | sudo bash
+```
+
+Update your apt repository after adding it and then install it:
+
+```bash
+sudo apt update && sudo apt install openlitespeed
+```
+
+If you want to serve PHP applications, you need to install the `lsphp` package for `openlitespeed`:
+
+```bash
+sudo apt install lsphp82 lsphp82-{curl,common,mysql}
+```
+
+In the above example, I install `lsphp` for PHP version 8.2 and extensions `curl, common` and `mysql`.
