@@ -3,7 +3,7 @@ title = "Browser installation on Debian"
 date = 2024-08-01
 
 [taxonomies]
-categories = ["Ubuntu"", "Linux"]
+categories = ["Ubuntu", "Linux"]
 tags = ["Browser", "Chrome", "Brave"]
 +++
 
