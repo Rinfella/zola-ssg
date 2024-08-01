@@ -210,3 +210,5 @@ But you have to create a Dashboard user first by running the following command:
 This script will prompt you to enter a username and password.
 Use this credentials to log into the web dashboard.
 The web dashboard will be located at `https://localhost:7080` or `https://<your_ip>:7080`.
+
+For further details on how to configure the web server, you can take a look at 
