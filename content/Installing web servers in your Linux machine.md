@@ -212,3 +212,5 @@ Use this credentials to log into the web dashboard.
 The web dashboard will be located at `https://localhost:7080` or `https://<your_ip>:7080`.
 
 For further details on how to configure the web server, you can take a look at the [OpenLiteSpeed Documentation](https://docs.openlitespeed.org/).
+
+That is all.. folks..
