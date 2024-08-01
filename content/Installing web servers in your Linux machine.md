@@ -24,7 +24,28 @@ sudo apt install apache2 -y
 
 By default, on Debian based systems, the configuration files for Apache locates under `/etc/apache2` every modifications you need to do must be done here.
 
-All of your virtual host configs must be inside `/etc/apache2/sites-available` and if you want to enable them, run :
+All of your virtual host configs must be inside `/etc/apache2/sites-available` and it must be a `.conf` file.
+
+Example config file:
+
+```xml
+<VirtualHost *:80>
+        ServerAdmin admin@example.com
+        ServerName example.com
+        DocumentRoot /var/www/api/public
+
+        <Directory /var/www/api/public>
+                AllowOverride All
+                allow from all
+                Options +Indexes
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+If you want to enable them, run :
 
 ```bash
 a2ensite your_config.conf
@@ -70,5 +91,60 @@ Unlike Apache, it does not have the built-in command like `a2ensite`.
 You have to manually do it like so:
 
 ```bash
-sudo ln
+sudo ln -s /etc/nginx/sites-available/myconfig /etc/nginx/sites-enabled
+```
+
+Here, `myconfig` is the name of your config file. Unlike Apache, it does not have to be a `.conf` file and the format of these configs are totally different.
+
+Example nginx config file:
+
+```nginx
+server {
+    listen 80;
+    index index.php index.html;
+    root /var/www/public;
+
+    # serve static files directly
+	location ~* \.(jpg|jpeg|gif|css|png|js|ico|html)$ {
+		access_log off;
+		expires max;
+		log_not_found off;
+	}
+
+	# removes trailing slashes (prevents SEO duplicate content issues)
+	if (!-d $request_filename)
+	{
+		rewrite ^/(.+)/$ /$1 permanent;
+	}
+
+	# enforce NO www
+	if ($host ~* ^www\.(.*))
+	{
+		set $host_without_www $1;
+		rewrite ^/(.*)$ $scheme://$host_without_www/$1 permanent;
+	}
+
+	# unless the request is for a valid file (image, js, css, etc.), send to bootstrap
+	if (!-e $request_filename)
+	{
+		rewrite ^/(.*)$ /index.php?/$1 last;
+		break;
+	}
+
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+
+	location ~* \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass app:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+		deny all;
+	}
+}
 ```
