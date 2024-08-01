@@ -23,4 +23,14 @@ sudo apt install apache2 -y
 
 By default, on Debian based systems, the configuration files for Apache locates under `/etc/apache2` every modifications you need to do must be done here.
 
-All of your virtual host configs must be inside `/etc/apache2/sites-available` and if you want to enable them, run `aa2ensite your_config.conf`
+All of your virtual host configs must be inside `/etc/apache2/sites-available` and if you want to enable them, run :
+```bash
+```a2ensite your_config.conf`.
+
+This `a2ensite` command will create a symlink of your config file into the `/etc/apache2/sites-enabled` directory of your Apache config. You must enable only the config you want to use. You can disable unwanted config files by running `a2dissite your_config.conf`.
+
+You can also enable other Apache modules by running the command: `a2enmod module_name`.
+Eg: `a2enmod rewrite, a2enmod proxy`
+
+You need to restart your `apache2` service every time you modify a configuration.
+You can do this by 
