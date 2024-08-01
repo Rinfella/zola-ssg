@@ -15,7 +15,8 @@ We will first look into Apache web server, how to install and configure it:
 
 # Apache
 
-On Debian and its family, Apache web server is by default present in the `apt` repository by the name `apache2`. You can install it by running:
+On Debian and its family, Apache web server is by default present in the `apt` repository by the name `apache2`.
+You can install it by running:
 
 ```bash
 sudo apt install apache2 -y
@@ -24,13 +25,38 @@ sudo apt install apache2 -y
 By default, on Debian based systems, the configuration files for Apache locates under `/etc/apache2` every modifications you need to do must be done here.
 
 All of your virtual host configs must be inside `/etc/apache2/sites-available` and if you want to enable them, run :
-```bash
-```a2ensite your_config.conf`.
 
-This `a2ensite` command will create a symlink of your config file into the `/etc/apache2/sites-enabled` directory of your Apache config. You must enable only the config you want to use. You can disable unwanted config files by running `a2dissite your_config.conf`.
+```bash
+a2ensite your_config.conf
+```
+
+This `a2ensite` command will create a symlink of your config fil ejjjjj into the `/etc/apache2/sites-enabled` directory of your Apache config.
+You must enable only the config you want to use. You can disable unwanted config files by running:
+
+```bash
+a2dissite your_config.conf
+```
 
 You can also enable other Apache modules by running the command: `a2enmod module_name`.
-Eg: `a2enmod rewrite, a2enmod proxy`
+Examples:
+
+```bash
+a2enmod rewrite
+a2enmod proxy
+```
 
 You need to restart your `apache2` service every time you modify a configuration.
-You can do this by 
+You can do this by running:
+
+```bash
+sudo systemctl restart apache2
+```
+
+# Nginx
+Like Apache, you can also install Nginx by running one command:
+
+```bash
+sudo apt install nginx -y
+```
+
+Nginx is a very versatile software, it is not only a web server, but can also act as a load balancer and also as a reverse proxy. I will not go into details how you can configure it like one, but all 
