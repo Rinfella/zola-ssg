@@ -59,4 +59,16 @@ Like Apache, you can also install Nginx by running one command:
 sudo apt install nginx -y
 ```
 
-Nginx is a very versatile software, it is not only a web server, but can also act as a load balancer and also as a reverse proxy. I will not go into details how you can configure it like one, but all 
+Nginx is a very versatile software, it is not only a web server, but can also act as a load balancer and also as a reverse proxy.
+I will not go into details how you can configure it like one, I will leave the rest for you to study further.
+
+Like Apache, the default configurations for Nginx is located at `/etc/nginx` directory and you may make changes for `nginx` here.
+
+All your available sites must be under sites-available and if you want to enable any of them, you must manually symlink them to the sites-enabled directory.
+
+Unlike Apache, it does not have the built-in command like `a2ensite`.
+You have to manually do it like so:
+
+```bash
+sudo ln
+```
