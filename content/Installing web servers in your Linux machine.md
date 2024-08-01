@@ -189,10 +189,24 @@ Update your apt repository after adding it and then install it:
 sudo apt update && sudo apt install openlitespeed
 ```
 
-If you want to serve PHP applications, you need to install the `lsphp` package for `openlitespeed`:
+If you want to serve PHP applications, you need to install the `lsphp` package for `openlitespeed` as well:
 
 ```bash
 sudo apt install lsphp82 lsphp82-{curl,common,mysql}
 ```
 
 In the above example, I install `lsphp` for PHP version 8.2 and extensions `curl, common` and `mysql`.
+
+The root directory for `openlitespeed` is `/usr/local/lsws`.
+
+You can configure the web server from the web console Dashboard.
+
+But you have to create a Dashboard user first by running the following command:
+
+```bash
+./usr/local/lsws/admin/misc/admpass.sh
+```
+
+This script will prompt you to enter a username and password.
+Use this credentials to log into the web dashboard.
+The web fdash
