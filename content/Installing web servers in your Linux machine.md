@@ -172,9 +172,9 @@ The `trace_enable` option set to `no` tells the server not to disclose the type 
 
 For further advanced configurations, please refer to the [Nginx Documentations](https://nginx.org/en/docs/)
 
-# Open LiteSpeed
+# OpenLiteSpeed
 
-Open LiteSpeed (OLS) is one of the fastest and most modern web servers right now.
+OpenLiteSpeed (OLS) is one of the fastest and most modern web servers right now.
 It supports CentOS, Debian and Ubuntu distros. 
 
 To add OLS into your machine repository, you need to run a script:
@@ -211,4 +211,4 @@ This script will prompt you to enter a username and password.
 Use this credentials to log into the web dashboard.
 The web dashboard will be located at `https://localhost:7080` or `https://<your_ip>:7080`.
 
-For further details on how to configure the web server, you can take a look at 
+For further details on how to configure the web server, you can take a look at the [OpenLiteSpeed Documentation](https://docs.openlitespeed.org/).
