@@ -36,4 +36,39 @@ Choose the corresponding number you want (in my case i want number 2).
 
 # Configuration
 
-Kitty follows the conventional `XDG` directory systems
+Kitty follows the conventional `XDG` directory systems, so you can store your configurations in the `$XDG_COMFIG_HOME`, i.e. `~/,config` .
+
+Make a new directory called `kitty` under `~/.config`:
+
+```bash
+mkdir -p ~/.config/kitty
+```
+
+Create a config file called `kitty.conf` under the `kitty` directory:
+
+```bash
+nano ~/.config/kitty/kitty.conf
+```
+
+Now you can input any customizations or configurations here.
+Here is a sample configuration file:
+
+```
+# Font Famiily:
+
+font_family Fira Code
+italic_font auto
+bold_font auto
+bold_italic_font auto
+
+# Font Size:
+font_size 14.0
+
+# COLORS:
+foreground #44cfad
+background #181a1b
+background_opacity 0.9
+
+```
+
+This is just a sample configuration for starter. You can deep dive into the documentations for more detailed guide on how to configure your  
