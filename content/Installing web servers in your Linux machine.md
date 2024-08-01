@@ -87,7 +87,7 @@ sudo systemctl restart apache2
 ```
 
 Additional security modules can also be added if you are really concerned about web server safety.
-Re
+Read more on [Apache Documentations](https://httpd.apache.org/docs/2.4/).
 # Nginx
 Like Apache, you can also install Nginx by running one command:
 
@@ -170,4 +170,11 @@ server {
 The above sample configuration can be sued as a reference and can be modified according to your needs.
 The `trace_enable` option set to `no` tells the server not to disclose the type and version of the web server used when encountering unexpected pages such as `Not Found (404)` page.
 
-For further advanced configurations, please refer to the nginx documentations
+For further advanced configurations, please refer to the [Nginx Documentations](https://nginx.org/en/docs/)
+
+# Open LiteSpeed
+
+Open LiteSpeed (OLS) is one of the fastest and most modern web servers right now.
+It supports CentOS, Debian and Ubuntu distros. 
+
+To add OLS into your machine repository, you need to run a script:
