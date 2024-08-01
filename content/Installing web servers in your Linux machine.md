@@ -87,6 +87,7 @@ sudo systemctl restart apache2
 ```
 
 Additional security modules can also be added if you are really concerned about web server safety.
+Re
 # Nginx
 Like Apache, you can also install Nginx by running one command:
 
@@ -167,4 +168,6 @@ server {
 ```
 
 The above sample configuration can be sued as a reference and can be modified according to your needs.
-The `trace_enable` option set to `no` tells the server not to disclose the type and version of the web server used when encountering unexpected pages such as `Not FOund (404)` page.
+The `trace_enable` option set to `no` tells the server not to disclose the type and version of the web server used when encountering unexpected pages such as `Not Found (404)` page.
+
+For further advanced configurations, please refer to the nginx documentations
