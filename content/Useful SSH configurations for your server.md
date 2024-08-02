@@ -19,6 +19,14 @@ For Debian and Debian based distros, the default location for SSH config files i
 There you can find both `ssh_config` and `sshd_config`.
 `ssh_config` is for the client configuration, and `sshd_config` is for the server configuration.
 We care about only the `sshd_config` file because this machine will be the server.
-Now open the `sshd_conf`
+Now open the `sshd_config` file using a text editor of your choice: vim, nano, etc.
 ## Port
 
+You can tell the SSH server to listen to another port by changing the default value of the `Port` variable:
+
+```config
+Port 22
+```
+
+You can change this port number into any port you want.
+but please make sure that you are not 
