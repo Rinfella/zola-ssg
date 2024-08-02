@@ -16,4 +16,9 @@ SSH is most common way we connect to cloud servers.
 We need to secure our connection so that our data may not be compromised.
 Now let's take a look into the configuration files for the SSH server:
 For Debian and Debian based distros, the default location for SSH config files is `/etc/ssh/`
-There you can find both `ssh_`
+There you can find both `ssh_config` and `sshd_config`.
+`ssh_config` is for the client configuration, and `sshd_config` is for the server configuration.
+We care about only the `sshd_config` file because this machine will be the server.
+Now open the `sshd_conf`
+## Port
+
