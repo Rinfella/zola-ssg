@@ -12,4 +12,8 @@ We will cover basic server configurations first..
 # SSH Server
 
 Let's assume we have a cloud server where we host a website.
-
+SSH is most common way we connect to cloud servers.
+We need to secure our connection so that our data may not be compromised.
+Now let's take a look into the configuration files for the SSH server:
+For Debian and Debian based distros, the default location for SSH config files is `/etc/ssh/`
+There you can find both `ssh_`
