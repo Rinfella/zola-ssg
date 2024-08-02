@@ -28,9 +28,7 @@ You can make `kitty` the default terminal by running the following command:
 sudo update-alternatives --config x-terminal-emulator
 ```
 
-It will prompt you to select a number, like the image shown below:
-
-![[Pasted image 20240801183435.png]]
+It will prompt you to select a number,
 
 Choose the corresponding number you want (in my case i want number 2).
 
