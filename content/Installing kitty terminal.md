@@ -29,8 +29,8 @@ sudo update-alternatives --config x-terminal-emulator
 ```
 
 It will prompt you to select a number,
-
-Choose the corresponding number you want (in my case i want number 2).
+Choose the corresponding number you want.
+Selecting nothing will default to the current one you are already using.
 
 # Configuration
 
