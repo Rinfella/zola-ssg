@@ -29,4 +29,5 @@ Port 22
 ```
 
 You can change this port number into any port you want.
-but please make sure that you are not 
+but please make sure that you are not conflicting the other services which also needs the same port.
+For example, `mysql` uses port `3306` so you cannot use port `3306` for SSH if you want to install `mysql` in that server.
