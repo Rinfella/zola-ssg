@@ -1,5 +1,7 @@
 # Markdown Blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d4160497-4154-4471-b776-42ab0a2b1e43/deploy-status)](https://app.netlify.com/sites/rynn/deploys)
+
 ## This is a static site generated using [zola](https://getzola.org)
 
 Zola is a Static Site Generator built using rust.
