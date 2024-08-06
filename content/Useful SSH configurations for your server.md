@@ -40,4 +40,11 @@ You can tell the SSH server to listen for a specific IP address when attempting 
 ListenAddress 0.0.0.0
 ```
 
-By listening to `0.0.0.0` it means: by default, the SSH server listens for any SSH connection request coming from any IPv4 address. Means it allows and
+By listening to `0.0.0.0` it means: by default, the SSH server listens for any SSH connection request coming from any IPv4 address.
+Means it allows anyone to attempt to connect to this SSH server.
+Even though other people may not know your SSH credentials , it is a good practice to allow only a limited no. of IP addresses to connect to your SSH server.
+
+You can also specify allowed list of IPv6 addresses by using the same `ListenAddress` variable. The default value is `::`, meaning it allows anyone to attempt connection.
+
+## Authentication
+
