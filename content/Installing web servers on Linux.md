@@ -3,7 +3,7 @@ title = "Installing web servers in your Linux machine"
 date = 2024-08-01
 
 [taxonomies]
-categories = ["Web Server", "Linux"]
+categories = ["Web Server", "Linux", "Ubuntu", "Debian"]
 tags = ["Apache", "Nginx", "OpenLitespeed"]
 +++
 
