@@ -98,4 +98,18 @@ The default is 6.
 
 ### MaxSessions
 
-Specifies the number of open sessions permitted per network connection
+Specifies the number of open sessions permitted per network connection.
+The default is 10.
+
+### Max Startups
+
+This specifies the max number of concurrent unauthenticated connections to the SSH daemon.
+Additional connections will be dropped until authentication succeeds or the `LoginGraceTime` expires for a connection.
+The default is 10.
+
+### PasswordAuthentication
+
+This specifies whether you can connect to the SSH server using password or not.
+The default is `yes`;
+
+### 
