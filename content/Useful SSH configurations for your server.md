@@ -161,5 +161,6 @@ It will SSH into the server of the domain `mydomain.com`, you can also put an IP
 The `User` variable is for the server system user.
 If you are using password based authentication, then you do not need to add this `IdentitiyFile` parameter.
 It will automatically prompt you your password.
-If you set up your SSH connection using a key based authentication, it is better to maintain your SSH connection this way rather than passing the key file into the ssh connection string.
+If you set up your SSH connection using a key based authentication, it is better to maintain your SSH connection this way rather than passing the key file into the ssh connection string every time you try to connect to your server.
 
+In this way, you can hace m
