@@ -68,3 +68,6 @@ Like wise, you can set a number of allowed or denied users or groups based on yo
 ### Authorized Keys
 
 We have `AuthorizedKeysFile` variable, which specifies the file that contains the keys which users will be using for authentication.
+Default location for authorized keys is `~/.ssh/authorized_keys`
+
+### 
