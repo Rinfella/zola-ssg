@@ -120,3 +120,13 @@ This sets a timeout interval in seconds after which if no data has been received
 This indicates how long will the client be connected to the server with being idle.
 
 # SSH Client
+
+You can configure the client side of the SSH too so that whenever you connect to any of your SSH servers, you can have the behaviour you want.
+For me personally, I want to persist my connection for as long as an hour or half an hour or so.
+To achieve this, I have the follwing configurations in my config file:
+
+Contents of `~/.ssh/config` file:
+```
+Host *
+	S
+```
