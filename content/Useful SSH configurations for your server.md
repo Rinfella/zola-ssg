@@ -76,4 +76,9 @@ Default location for authorized keys is `~/.ssh/authorized_keys`
 
 This sets the number of client alive messages even if `sshd` does not send back any messages.
 If this threshold is reached while client alive messages are being sent, then `sshd` will disconnect the client, terminating the session.
-The default value for `c`
+The default value for `ClientAliveCountMax` is 3.
+Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH connection for the SSH client will persist for `3 * 15` seconds . i.e. 45 seconds.
+
+### ClientAliveInterval
+
+This sets a timeout interval in seconds after which if no data has been received
