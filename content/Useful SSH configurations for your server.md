@@ -24,10 +24,20 @@ Now open the `sshd_config` file using a text editor of your choice: vim, nano, e
 
 You can tell the SSH server to listen to another port by changing the default value of the `Port` variable:
 
-```config
+```conf
 Port 22
 ```
 
 You can change this port number into any port you want.
 but please make sure that you are not conflicting the other services which also needs the same port.
 For example, `mysql` uses port `3306` so you cannot use port `3306` for SSH if you want to install `mysql` in that server.
+
+## ListenAddress
+
+You can tell the SSH server to listen for a specific IP address when attempting to make SSH connections. The default config is:
+
+```conf
+ListenAddress 0.0.0.0
+```
+
+By listening to `0.0.0.0` it means: by default, the SSH server listens for any SSH connection request coming from any IPv4 address. Means it allows and
