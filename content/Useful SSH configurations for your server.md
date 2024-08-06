@@ -48,3 +48,11 @@ You can also specify allowed list of IPv6 addresses by using the same `ListenAdd
 
 ## Authentication
 
+There are certain keywords which allows or denies a user or a user gorup. They are in the following order of priority:
+
+```
+DenyUsers > AllowUsers > DenyGroups > AllowGroups
+```
+
+In the above hierarchy, `DenyUsers` has the highest priority, it consists of users whose name has or starts with the specified pattern.
+Like wise, you can set a number of allowed or denied users or groups based on your needs
