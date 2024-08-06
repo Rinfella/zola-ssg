@@ -135,4 +135,7 @@ Host *
 ```
 
 In the above configurations, `Host *` defines that the configuration is for all the hosts connected using this SSH client.
-The `ServerAliveInterval` parameter defines how frequent the clie
+The `ServerAliveInterval` variable defines how frequent the client must send a message to the server in order to keep the connection alive.
+The `ServerAliveCountMax` variable sets the number of keep alive messages that may be sent by the client without the client receiving any messages back from the server.
+Putting both those values to `60` will result in the client sending keep alive request every minute for 60 times.
+This means that all SSH connections made using this settings will persist for 1 hour even if the client i
