@@ -81,4 +81,6 @@ Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH conne
 
 ### ClientAliveInterval
 
-This sets a timeout interval in seconds after which if no data has been received
+This sets a timeout interval in seconds after which if no data has been received from the client.
+This indicates how long will the client be connected to the server with being idle.
+
