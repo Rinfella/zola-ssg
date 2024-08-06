@@ -84,3 +84,18 @@ Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH conne
 This sets a timeout interval in seconds after which if no data has been received from the client.
 This indicates how long will the client be connected to the server with being idle.
 
+### LoginGraceTIme
+
+The server disconnects after this time if the user has not successfully login.
+If the value is 0, there is no time limit.
+The default value is 120.
+
+### MaxAuthTries
+
+This specifies the max number of authentication attempts permitted per connection.
+Once the number of failures reaches half this value, additional failures are logged.
+The default is 6.
+
+### MaxSessions
+
+Specifies the number of open sessions permitted per network connection
