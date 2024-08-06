@@ -125,6 +125,8 @@ You can configure the client side of the SSH too so that whenever you connect to
 For me personally, I want to persist my connection for as long as an hour or half an hour or so.
 To achieve this, I have the follwing configurations in my config file:
 
+## Global Client Config
+
 Contents of `~/.ssh/config` file:
 ```
 Host *
@@ -138,4 +140,17 @@ In the above configurations, `Host *` defines that the configuration is for all 
 The `ServerAliveInterval` variable defines how frequent the client must send a message to the server in order to keep the connection alive.
 The `ServerAliveCountMax` variable sets the number of keep alive messages that may be sent by the client without the client receiving any messages back from the server.
 Putting both those values to `60` will result in the client sending keep alive request every minute for 60 times.
-This means that all SSH connections made using this settings will persist for 1 hour even if the client i
+This means that all SSH connections made using this settings will persist for 1 hour even if the client is idle without receiving back any messages from the server.
+
+## Hosts Config
+
+An example configuration will look something like this:
+
+```conf
+Host my-website
+	Hostname mydomain.com
+	User myuser
+	Port 6969
+	IdentityFile /path/to/your/keyfile
+```
+
