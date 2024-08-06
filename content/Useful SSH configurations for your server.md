@@ -46,7 +46,7 @@ Even though other people may not know your SSH credentials , it is a good practi
 
 You can also specify allowed list of IPv6 addresses by using the same `ListenAddress` variable. The default value is `::`, meaning it allows anyone to attempt connection.
 
-## Authentication
+## Authentication Settings
 
 ### Allow or deny a user or group of users
 
@@ -70,4 +70,10 @@ Like wise, you can set a number of allowed or denied users or groups based on yo
 We have `AuthorizedKeysFile` variable, which specifies the file that contains the keys which users will be using for authentication.
 Default location for authorized keys is `~/.ssh/authorized_keys`
 
-### 
+## Connection Settings
+
+### ClientAliveCountMax
+
+This sets the number of client alive messages even if `sshd` does not send back any messages.
+If this threshold is reached while client alive messages are being sent, then `sshd` will disconnect the client, terminating the session.
+The default value for `c`
