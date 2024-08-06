@@ -156,4 +156,10 @@ Host my-website
 
 This example configuration defines a simple SSH connection for `mydomain.com` using the firendly name `my-website`.
 You can simply SSH into the above server by typing `ssh my-website`.
-It will automatically use all the parameters tyou soecify in this 
+It will automatically use all the parameters you specify in this config file.
+It will SSH into the server of the domain `mydomain.com`, you can also put an IP address instead of a domain name.
+The `User` variable is for the server system user.
+If you are using password based authentication, then you do not need to add this `IdentitiyFile` parameter.
+It will automatically prompt you your password.
+If you set up your SSH connection using a key based authentication, it is better to maintain your SSH connection this way rather than passing the key file into the ssh connection string.
+
