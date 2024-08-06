@@ -20,7 +20,9 @@ There you can find both `ssh_config` and `sshd_config`.
 `ssh_config` is for the client configuration, and `sshd_config` is for the server configuration.
 We care about only the `sshd_config` file because this machine will be the server.
 Now open the `sshd_config` file using a text editor of your choice: vim, nano, etc.
-## Port
+## Authentication Settings
+
+### Port
 
 You can tell the SSH server to listen to another port by changing the default value of the `Port` variable:
 
@@ -32,7 +34,7 @@ You can change this port number into any port you want.
 but please make sure that you are not conflicting the other services which also needs the same port.
 For example, `mysql` uses port `3306` so you cannot use port `3306` for SSH if you want to install `mysql` in that server.
 
-## ListenAddress
+### ListenAddress
 
 You can tell the SSH server to listen for a specific IP address when attempting to make SSH connections. The default config is:
 
@@ -45,8 +47,6 @@ Means it allows anyone to attempt to connect to this SSH server.
 Even though other people may not know your SSH credentials , it is a good practice to allow only a limited no. of IP addresses to connect to your SSH server.
 
 You can also specify allowed list of IPv6 addresses by using the same `ListenAddress` variable. The default value is `::`, meaning it allows anyone to attempt connection.
-
-## Authentication Settings
 
 ### Allow or deny a user or group of users
 
@@ -69,20 +69,6 @@ Like wise, you can set a number of allowed or denied users or groups based on yo
 
 We have `AuthorizedKeysFile` variable, which specifies the file that contains the keys which users will be using for authentication.
 Default location for authorized keys is `~/.ssh/authorized_keys`
-
-## Connection Settings
-
-### ClientAliveCountMax
-
-This sets the number of client alive messages even if `sshd` does not send back any messages.
-If this threshold is reached while client alive messages are being sent, then `sshd` will disconnect the client, terminating the session.
-The default value for `ClientAliveCountMax` is 3.
-Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH connection for the SSH client will persist for `3 * 15` seconds . i.e. 45 seconds.
-
-### ClientAliveInterval
-
-This sets a timeout interval in seconds after which if no data has been received from the client.
-This indicates how long will the client be connected to the server with being idle.
 
 ### LoginGraceTIme
 
@@ -118,4 +104,19 @@ This option allows empty password strings to be used when password based authent
 The default value is `'no'` .
 You must not enable this for safety purposes even if you enable password authentication.
 
-### 
+## Connection Settings
+
+### ClientAliveCountMax
+
+This sets the number of client alive messages even if `sshd` does not send back any messages.
+If this threshold is reached while client alive messages are being sent, then `sshd` will disconnect the client, terminating the session.
+The default value for `ClientAliveCountMax` is 3.
+Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH connection for the SSH client will persist for `3 * 15` seconds . i.e. 45 seconds.
+
+
+### ClientAliveInterval
+
+This sets a timeout interval in seconds after which if no data has been received from the client.
+This indicates how long will the client be connected to the server with being idle.
+
+# SSH Client
