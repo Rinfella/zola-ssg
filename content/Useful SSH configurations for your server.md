@@ -128,5 +128,11 @@ To achieve this, I have the follwing configurations in my config file:
 Contents of `~/.ssh/config` file:
 ```
 Host *
-	S
+	ServerAliveInterval 60
+	ServerAliveCountMax 60
+	Compression yes
+	Cipers aes128-ctr, aes192-ctr, aes256-ctr
 ```
+
+In the above configurations, `Host *` defines that the configuration is for all the hosts connected using this SSH client.
+The `ServerAliveInterval` parameter defines how frequent the clie
