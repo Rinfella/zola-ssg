@@ -112,4 +112,10 @@ The default is 10.
 This specifies whether you can connect to the SSH server using password or not.
 The default is `yes`;
 
+### PermitEmptyPasswords
+
+This option allows empty password strings to be used when password based authentication is on.
+The default value is `'no'` .
+You must not enable this for safety purposes even if you enable password authentication.
+
 ### 
