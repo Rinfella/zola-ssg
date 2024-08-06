@@ -1,7 +1,18 @@
-# Introduction
++++
+title = "Useful SSH configurations for your server"
+date = 2024-08-06
+
+[taxonomies]
+categories = ["SSH", "Linux"]
+tags = ["openssh", "ssh", "s]
++++
 
 This article is about the basic SSH server and client configurations for easier and more secure use of the SSH service in general.
-I will be using `open-ssh` for this one.
+I will be using `openssh` for this one.
+
+<!-- more -->
+# Introduction
+
 SSH service is the service we used to connect to remote server via terminal.
 You can also connect to other machines within the same network.
 I will not go into details what a SSH server is.
@@ -163,4 +174,8 @@ If you are using password based authentication, then you do not need to add this
 It will automatically prompt you your password.
 If you set up your SSH connection using a key based authentication, it is better to maintain your SSH connection this way rather than passing the key file into the ssh connection string every time you try to connect to your server.
 
-In this way, you can hace m
+In this way, you can have multiple connection configurations for your multiple servers and can connect to  them using a friendly name given by you.
+
+# Conclusion
+
+This article consists of basic SSH server + client configuration
