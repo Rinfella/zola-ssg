@@ -154,3 +154,6 @@ Host my-website
 	IdentityFile /path/to/your/keyfile
 ```
 
+This example configuration defines a simple SSH connection for `mydomain.com` using the firendly name `my-website`.
+You can simply SSH into the above server by typing `ssh my-website`.
+It will automatically use all the parameters tyou soecify in this 
