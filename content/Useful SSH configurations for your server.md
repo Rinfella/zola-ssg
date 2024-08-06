@@ -4,7 +4,7 @@ date = 2024-08-06
 
 [taxonomies]
 categories = ["SSH", "Linux"]
-tags = ["openssh", "ssh", "s]
+tags = ["openssh", "ssh", "sshd"]
 +++
 
 This article is about the basic SSH server and client configurations for easier and more secure use of the SSH service in general.
@@ -178,4 +178,7 @@ In this way, you can have multiple connection configurations for your multiple s
 
 # Conclusion
 
-This article consists of basic SSH server + client configuration
+This article consists of basic SSH server + client configuration on a surface level.
+It covers the basic usage and configurations for day to day use.
+If you want more specific and target-specific configurations for your SSH server or client connections, you can take a look at the [openssh manual](https://www.openssh.com/manual.html) page for more instructions on how to configure them the way you want.
+Thank you for reading.
