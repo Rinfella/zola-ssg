@@ -1,5 +1,5 @@
 +++
-title = "Installing web servers in your Linux machine"
+title = "Installing web servers on Linux"
 date = 2024-08-01
 
 [taxonomies]
