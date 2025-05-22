@@ -13,7 +13,7 @@ Basic instructions on how to install and configure a couple of web servers in De
 
 We will first look into Apache web server, how to install and configure it:
 
-# Apache
+## Apache
 
 On Debian and its family, Apache web server is by default present in the `apt` repository by the name `apache2`.
 You can install it by running:
@@ -88,7 +88,8 @@ sudo systemctl restart apache2
 
 Additional security modules can also be added if you are really concerned about web server safety.
 Read more on [Apache Documentations](https://httpd.apache.org/docs/2.4/).
-# Nginx
+
+## Nginx
 Like Apache, you can also install Nginx by running one command:
 
 ```bash
@@ -172,7 +173,7 @@ The `trace_enable` option set to `no` tells the server not to disclose the type 
 
 For further advanced configurations, please refer to the [Nginx Documentations](https://nginx.org/en/docs/)
 
-# OpenLiteSpeed
+## OpenLiteSpeed
 
 OpenLiteSpeed (OLS) is one of the fastest and most modern web servers right now.
 It supports CentOS, Debian and Ubuntu distros. 

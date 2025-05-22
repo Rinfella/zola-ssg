@@ -4,14 +4,14 @@ date = 2024-08-01
 
 [taxonomies]
 categories = ["Linux", "Ubuntu", "Debian", "Kitty"]
-tags = ["Kitty", "Terminal Emulator"]
+tags = ["Kitty", "Terminal", "CLI"]
 +++
 
-Kitty terminal emulator installation instructions foe Debian and Debian-based distors.
+Kitty terminal emulator installation instructions for Debian and Debian-based distros.
 
 <!-- more -->
 
-# Install kitty using apt
+## Install kitty using apt
 
 The default `apt` package manager has `kitty` by default and you can simply install it my running the following command:
 
@@ -21,6 +21,8 @@ sudo apt install kitty -y
 
 You can confirm the kitty installation by running `kitty` from your current terminal.
 Kitty terminal should launch as a new window if your installation is correct.
+
+NOTE: If you want more updated version of `kitty` terminal, then you can check out the official [kitty installation guide](https://sw.kovidgoyal.net/kitty/). They have a link to download and run a script for kitty installation; these are usually more up-to-date than the `apt` repository.
 
 You can make `kitty` the default terminal by running the following command:
 
@@ -32,7 +34,7 @@ It will prompt you to select a number,
 Choose the corresponding number you want.
 Selecting nothing will default to the current one you are already using.
 
-# Configuration
+## Configuration
 
 Kitty follows the conventional `XDG` directory systems, so you can store your configurations in the `$XDG_COMFIG_HOME`, i.e. `~/,config` .
 
@@ -52,7 +54,7 @@ Now you can input any customizations or configurations here.
 Here is a sample configuration file:
 
 ```
-# Font Famiily:
+# Font Family:
 
 font_family Fira Code
 italic_font auto
@@ -70,10 +72,11 @@ background_opacity 0.9
 ```
 
 This is just a sample configuration for starter. You can deep dive into the [documentations](https://sw.kovidgoyal.net/kitty/conf/) for more detailed guide on how to configure your `kitty` terminal.
+You can check out my personal kitty configuration at my [GitHub](https://github.com/Rinfella/kitty-conf) for refernce.
 
 Kitty is one of the most popular GPU-based terminal emulator among Linux users and has one of the best features like image rendering support, many kitten modules, etc.
 
-# Conclusion
+## Conclusion
 
 This is just the tip of the iceberg into customizing your Linux user-interface.
 Since the terminal is one of the most important applications in your Linux system, it is important that you have a good experience with it.

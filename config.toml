@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://rynn.netlify.app"
-title = "Rinfella's Blog"
+title = "Rinfela's Blog"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -19,7 +19,7 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
-author = "Rinfella"
+author = "Rinfela Pachuau"
 after_dark_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/categories", name = "Categories"},
