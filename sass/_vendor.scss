@@ -257,10 +257,14 @@ a:hover {
 .hack li,
 .hack ol,
 .hack p,
-.hack nav p,
 .hack section,
 .hack ul {
   float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hack nav p {
   margin: 0;
   padding: 0;
 }
