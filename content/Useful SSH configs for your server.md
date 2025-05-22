@@ -77,40 +77,40 @@ In the above hierarchy, `DenyUsers` has the highest priority, it consists of use
 Like wise, you can set a number of allowed or denied users or groups based on your needs.
 `DenyUsers` has the highest priority while `AllowGroups` has the lowest priority.
 
-## Authorized Keys
+### Authorized Keys
 
 We have `AuthorizedKeysFile` variable, which specifies the file that contains the keys which users will be using for authentication.
 Default location for authorized keys is `~/.ssh/authorized_keys`
 
-## LoginGraceTIme
+### LoginGraceTIme
 
 The server disconnects after this time if the user has not successfully login.
 If the value is 0, there is no time limit.
 The default value is 120.
 
-## MaxAuthTries
+### MaxAuthTries
 
 This specifies the max number of authentication attempts permitted per connection.
 Once the number of failures reaches half this value, additional failures are logged.
 The default is 6.
 
-## MaxSessions
+### MaxSessions
 
 Specifies the number of open sessions permitted per network connection.
 The default is 10.
 
-## Max Startups
+### Max Startups
 
 This specifies the max number of concurrent unauthenticated connections to the SSH daemon.
 Additional connections will be dropped until authentication succeeds or the `LoginGraceTime` expires for a connection.
 The default is 10.
 
-## PasswordAuthentication
+### PasswordAuthentication
 
 This specifies whether you can connect to the SSH server using password or not.
 The default is `yes`;
 
-## PermitEmptyPasswords
+### PermitEmptyPasswords
 
 This option allows empty password strings to be used when password based authentication is on.
 The default value is `'no'` .
@@ -118,7 +118,7 @@ You must not enable this for safety purposes even if you enable password authent
 
 ## Connection Settings
 
-## ClientAliveCountMax
+### ClientAliveCountMax
 
 This sets the number of client alive messages even if `sshd` does not send back any messages.
 If this threshold is reached while client alive messages are being sent, then `sshd` will disconnect the client, terminating the session.
@@ -126,7 +126,7 @@ The default value for `ClientAliveCountMax` is 3.
 Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH connection for the SSH client will persist for `3 * 15` seconds . i.e. 45 seconds.
 
 
-## ClientAliveInterval
+### ClientAliveInterval
 
 This sets a timeout interval in seconds after which if no data has been received from the client.
 This indicates how long will the client be connected to the server with being idle.
