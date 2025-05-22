@@ -11,7 +11,7 @@ Kitty terminal emulator installation instructions for Debian and Debian-based di
 
 <!-- more -->
 
-## Install kitty using apt
+# Install kitty using apt
 
 The default `apt` package manager has `kitty` by default and you can simply install it my running the following command:
 
@@ -36,7 +36,7 @@ It will prompt you to select a number,
 Choose the corresponding number you want.
 Selecting nothing will default to the current one you are already using.
 
-## Configuration
+# Configuration
 
 Kitty follows the conventional `XDG` directory systems, so you can store your configurations in the `$XDG_COMFIG_HOME`, i.e. `~/,config` .
 
@@ -78,7 +78,7 @@ You can check out my personal kitty configuration at my [GitHub](https://github.
 
 Kitty is one of the most popular GPU-based terminal emulator among Linux users and has one of the best features like image rendering support, many kitten modules, etc.
 
-## Conclusion
+# Conclusion
 
 This is just the tip of the iceberg into customizing your Linux user-interface.
 Since the terminal is one of the most important applications in your Linux system, it is important that you have a good experience with it.

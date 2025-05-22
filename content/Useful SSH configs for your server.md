@@ -11,7 +11,7 @@ This article is about the basic SSH server and client configurations for easier 
 I will be using `openssh` for this one.
 
 <!-- more -->
-## Introduction
+# Introduction
 
 SSH service is the service we used to connect to remote server via terminal.
 You can also connect to other machines within the same network.
@@ -20,7 +20,7 @@ All we have to know is that it is a `client-server` architecture.
 We need to configure both the server and the client to communicate properly.
 We will cover basic server configurations first..
 
- ## SSH Server
+# SSH Server
 
 Let's assume we have a cloud server where we host a website.
 SSH is most common way we connect to cloud servers.
@@ -31,9 +31,10 @@ There you can find both `ssh_config` and `sshd_config`.
 `ssh_config` is for the client configuration, and `sshd_config` is for the server configuration.
 We care about only the `sshd_config` file because this machine will be the server.
 Now open the `sshd_config` file using a text editor of your choice: vim, nano, etc.
-### Authentication Settings
 
-#### Port
+## Authentication Settings
+
+### Port
 
 You can tell the SSH server to listen to another port by changing the default value of the `Port` variable:
 
@@ -45,7 +46,7 @@ You can change this port number into any port you want.
 but please make sure that you are not conflicting the other services which also needs the same port.
 For example, `mysql` uses port `3306` so you cannot use port `3306` for SSH if you want to install `mysql` in that server.
 
-#### ListenAddress
+### ListenAddress
 
 You can tell the SSH server to listen for a specific IP address when attempting to make SSH connections. The default config is:
 
@@ -59,7 +60,7 @@ Even though other people may not know your SSH credentials , it is a good practi
 
 You can also specify allowed list of IPv6 addresses by using the same `ListenAddress` variable. The default value is `::`, meaning it allows anyone to attempt connection.
 
-#### Allow or deny a user or group of users
+### Allow or deny a user or group of users
 
 - DenyUsers
 - AllowUsers
@@ -76,48 +77,48 @@ In the above hierarchy, `DenyUsers` has the highest priority, it consists of use
 Like wise, you can set a number of allowed or denied users or groups based on your needs.
 `DenyUsers` has the highest priority while `AllowGroups` has the lowest priority.
 
-#### Authorized Keys
+## Authorized Keys
 
 We have `AuthorizedKeysFile` variable, which specifies the file that contains the keys which users will be using for authentication.
 Default location for authorized keys is `~/.ssh/authorized_keys`
 
-#### LoginGraceTIme
+## LoginGraceTIme
 
 The server disconnects after this time if the user has not successfully login.
 If the value is 0, there is no time limit.
 The default value is 120.
 
-#### MaxAuthTries
+## MaxAuthTries
 
 This specifies the max number of authentication attempts permitted per connection.
 Once the number of failures reaches half this value, additional failures are logged.
 The default is 6.
 
-#### MaxSessions
+## MaxSessions
 
 Specifies the number of open sessions permitted per network connection.
 The default is 10.
 
-#### Max Startups
+## Max Startups
 
 This specifies the max number of concurrent unauthenticated connections to the SSH daemon.
 Additional connections will be dropped until authentication succeeds or the `LoginGraceTime` expires for a connection.
 The default is 10.
 
-#### PasswordAuthentication
+## PasswordAuthentication
 
 This specifies whether you can connect to the SSH server using password or not.
 The default is `yes`;
 
-#### PermitEmptyPasswords
+## PermitEmptyPasswords
 
 This option allows empty password strings to be used when password based authentication is on.
 The default value is `'no'` .
 You must not enable this for safety purposes even if you enable password authentication.
 
-### Connection Settings
+## Connection Settings
 
-#### ClientAliveCountMax
+## ClientAliveCountMax
 
 This sets the number of client alive messages even if `sshd` does not send back any messages.
 If this threshold is reached while client alive messages are being sent, then `sshd` will disconnect the client, terminating the session.
@@ -125,18 +126,18 @@ The default value for `ClientAliveCountMax` is 3.
 Let's say if the `ClientAliveInterval` variable is set to 15, then the SSH connection for the SSH client will persist for `3 * 15` seconds . i.e. 45 seconds.
 
 
-#### ClientAliveInterval
+## ClientAliveInterval
 
 This sets a timeout interval in seconds after which if no data has been received from the client.
 This indicates how long will the client be connected to the server with being idle.
 
-## SSH Client
+# SSH Client
 
 You can configure the client side of the SSH too so that whenever you connect to any of your SSH servers, you can have the behaviour you want.
 For me personally, I want to persist my connection for as long as an hour or half an hour or so.
 To achieve this, I have the follwing configurations in my config file:
 
-### Global Client Config
+## Global Client Config
 
 Contents of `~/.ssh/config` file:
 ```
@@ -153,7 +154,7 @@ The `ServerAliveCountMax` variable sets the number of keep alive messages that m
 Putting both those values to `60` will result in the client sending keep alive request every minute for 60 times.
 This means that all SSH connections made using this settings will persist for 1 hour even if the client is idle without receiving back any messages from the server.
 
-### Hosts Config
+## Hosts Config
 
 An example configuration will look something like this:
 
@@ -176,7 +177,7 @@ If you set up your SSH connection using a key based authentication, it is better
 
 In this way, you can have multiple connection configurations for your multiple servers and can connect to  them using a friendly name given by you.
 
-## Conclusion
+# Conclusion
 
 This article consists of basic SSH server + client configuration on a surface level.
 It covers the basic usage and configurations for day to day use.
