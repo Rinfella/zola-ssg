@@ -61,7 +61,7 @@ theme_color = "green"
 show_menu_items = 6
 
 # set theme to full screen width.
-full_width = true
+full_width = false
 
 # center theme with default width.
 center = true
