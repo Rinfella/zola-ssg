@@ -1,5 +1,5 @@
 +++
-title = "Useful SSH configurations for your server"
+title = "Useful SSH configs for your server"
 date = 2024-08-06
 
 [taxonomies]
