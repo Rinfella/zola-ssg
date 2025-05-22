@@ -28,6 +28,7 @@
 iframe {
   border: 0;
 }
+
 main, footer {
   animation: intro 0.3s both;
   animation-delay: 0.15s;
@@ -93,11 +94,38 @@ article [itemprop="summary"] p {
   margin: 0;
 }
 
+/* Enhanced container widths for better horizontal space usage */
 @media screen and (min-width: 768px) {
   html {
     font-size: 1em;
   }
+  
+  /* Increase container width by ~30% while maintaining padding */
   .container {
-    max-width: 50rem;
+    max-width: 65rem; /* Increased from 50rem to 65rem (~30% increase) */
+    padding: 0 2rem; /* Increased padding to maintain distance from edges */
+  }
+}
+
+/* Additional responsive breakpoints for better control */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 75rem; /* Even wider on larger screens */
+    padding: 0 3rem; /* More padding on very large screens */
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 85rem; /* Maximum width for very large displays */
+    padding: 0 4rem; /* Generous padding to prevent edge touching */
+  }
+}
+
+/* Ensure mobile remains unchanged */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1rem; /* Standard mobile padding */
   }
 }

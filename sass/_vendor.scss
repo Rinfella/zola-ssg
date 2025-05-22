@@ -207,6 +207,9 @@ a:hover {
 .web-title:after {
   content: "====================================================================================================";
 }
+.hack.main.container {
+  padding-bottom: 2rem;
+}
 
 .hack,
 .hack blockquote,
@@ -243,6 +246,7 @@ a:hover {
 .hack blockquote,
 .hack code,
 .hack footer,
+.hack footer p,
 .hack h1,
 .hack h2,
 .hack h3,
@@ -253,6 +257,7 @@ a:hover {
 .hack li,
 .hack ol,
 .hack p,
+.hack nav p,
 .hack section,
 .hack ul {
   float: none;
