@@ -30,7 +30,7 @@ You can make `kitty` the default terminal by running the following command:
 sudo update-alternatives --config x-terminal-emulator
 ```
 
-![Kitty Terminal Image](../attachments/kitty-term.png)
+![Kitty Terminal Image](/attachments/kitty-term.png)
 
 It will prompt you to select a number,
 Choose the corresponding number you want.
