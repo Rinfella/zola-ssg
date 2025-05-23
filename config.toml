@@ -54,7 +54,7 @@ show_tags = true
 
 # Theme color. You can have any color you want, so long as it's...
 # ["orange", "blue", "red", "green", "pink"]
-theme_color = "green"
+theme_color = "blue"
 
 # How many menu items to show on desktop. if you set this to 0, only submenu
 # button will be visible.
