@@ -4,11 +4,12 @@ date = 2025-07-02
 
 [taxonomies]
 categories = ["Linux", "Shell", "Bluetooth"]
-tags = ["Shell", "Permissions", "Sudoers", "Bluetooth"]
+tags = ["shell", "permissions", "sudoers", "bluetooth"]
 +++
 
-In this topic, we will talk about giving unrestricted access to a specific binary for a specific user in the UNIX system.
+This topic is about giving unrestricted access to a specific binary for a specific user in the UNIX system.
 
+<!-- more -->
 # How To:
 
 Keep in mind that we don't want to give unrestricted access to every commands available to a specific user even if the user is the only user in the system.
@@ -56,4 +57,4 @@ If you think giving `rfkill` unstricted access is safe, you can also do the same
 This is safer because `rfkill` has the ability to control your wifi as well as bluetooth, while `bluetoothctl` and `bluetoothd` only control bluetooth.
 
 Hope you learn something new and thank you for reading. 
-For more information about sudoers, you can read [Sudoers Reference](https://www.sudo.ws/man/1.8.16/sudoers.5.html)
+For more information about sudoers, you can read [Sudoers Reference](https://www.sudo.ws/docs/man/sudoers.man/)

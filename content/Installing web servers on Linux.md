@@ -4,7 +4,7 @@ date = 2024-08-01
 
 [taxonomies]
 categories = ["Web Server", "Linux", "Ubuntu", "Debian"]
-tags = ["Apache", "Nginx", "OpenLitespeed"]
+tags = ["apache", "nginx", "openLitespeed"]
 +++
 
 Basic instructions on how to install and configure a couple of web servers in Debian and Debian based Linux distros. Nginx, Apache, OpenLitespeed..
@@ -117,11 +117,14 @@ Example nginx config file:
 ```nginx
 server {
     listen 80;
-	servername example.com
-    index index.php index.html;
     root /var/www/public;
 
+	servername example.com
+    index index.php index.html;
+
 	trace_enable no;
+    client_max_body_size 100M;
+    server_tokens off;
 
     # serve static files directly
 	location ~* \.(jpg|jpeg|gif|css|png|js|ico|html)$ {
@@ -168,7 +171,7 @@ server {
 }
 ```
 
-The above sample configuration can be sued as a reference and can be modified according to your needs.
+The above sample configuration can be used as a reference and can be modified according to your needs.
 The `trace_enable` option set to `no` tells the server not to disclose the type and version of the web server used when encountering unexpected pages such as `Not Found (404)` page.
 
 For further advanced configurations, please refer to the [Nginx Documentations](https://nginx.org/en/docs/)

@@ -4,7 +4,7 @@ date = 2024-08-01
 
 [taxonomies]
 categories = ["Linux", "Ubuntu", "Debian", "Kitty"]
-tags = ["Kitty", "Terminal", "CLI"]
+tags = ["kitty", "terminal", "cli"]
 +++
 
 Kitty terminal emulator installation instructions for Debian and Debian-based distros.
